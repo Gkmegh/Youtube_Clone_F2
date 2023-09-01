@@ -10,7 +10,7 @@ const baseUrl = `https://www.googleapis.com/youtube/v3`;
 
 const searchButton = document.getElementById("search") ;
 const searchInput = document.getElementById("search-input");
-const containerdata = document.getElementById("container");
+const containerdata = document.getElementById("videos-container");
 
 searchButton.addEventListener("click", () => {
     let searchString = searchInput.value.trim();
@@ -28,6 +28,8 @@ async function getSearchResults(searchString) {
     const result = await response.json();
     console.log(result)
     addDataOntoUI(result.items);
+
+
 }
 
 function addDataOntoUI(videosList) {
@@ -38,14 +40,34 @@ function addDataOntoUI(videosList) {
         const videoElement = document.createElement("div");
         videoElement.className = "video";
         videoElement.innerHTML = `
-                    <img src="${snippet.thumbnails.high.url}" >
-                    <p>${snippet.title}</p>
-                    <b>${snippet.channelTitle}</b>
+        <div class="video-info" onclick="openVideoDetails('${video.id}')" >
+        <div class="video-image">
+          <img src="${snippet.thumbnails.high.url}" alt="video title" />
+        </div>
+
+        <div class="video-description">
+          <div class="channel-avatar">
+            <img src="https://yt3.googleusercontent.com/584JjRp5QMuKbyduM_2k5RlXFqHJtQ0qLIPZpwbUjMJmgzZngHcam5JMuZQxyzGMV5ljwJRl0Q=s176-c-k-c0x00ffffff-no-rj" alt="channel- aviator" />
+          </div>
+
+
+          <div class="video-title">${snippet.title}
+           
+          <div class="channel-description">
+
+            <b class="channel-name"> ${snippet.channelTitle}</b>
+
+            <div class="channel-time">
+            <p class="video-views">15K Views  ${" "} . ${" "}</p>
+            <p class="video-time">4 week ago</p>
+            </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
         `;
-        containerdata.appendChild(videoElement)
+        containerdata.insertBefore(videoElement, containerdata.firstChild);
    })
 }
 
-function additem(){
-    
-}

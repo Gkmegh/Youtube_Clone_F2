@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youtube UI Clone</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="./images/youtube.png" type="image/x-icon"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
       
@@ -16,16 +17,12 @@
 </head>
 <body>
   <div class="container">
+    
     <!-- Navigation bar-->
       <nav>
         <div class="left">
-          <div class="icon">
             <img src="./images/hamburger.png" />
-          </div>
-  
-          <div class="logo">
             <img src="./images/logo.png" />
-          </div>
         </div>
   
         <div class="middle">
@@ -59,21 +56,23 @@
 
 
       <!-- side navigation-->
-      <div class="side-bar">
+      <div class="main">
+
         <div class="side-upper">
-         <p><span class="material-symbols-outlined md-dark">home</span> Home</p>   
-         <p><span class="material-symbols-outlined">explore</span> Explore</p>
-         <p><span class="material-symbols-outlined">subscriptions</span>Subscriptions</p>
-         <div class="side-mid">
+          
+          <div class="side-mid">
+            <p id="home-icon"><span class="material-symbols-outlined md-dark">home</span> Home</p>   
+            <p><span class="material-symbols-outlined">explore</span> Explore</p>
+            <p><span class="material-symbols-outlined">subscriptions</span>Subscriptions</p>
             <p><span class="material-symbols-outlined">video_library</span>Library</p>
             <p><span class="material-symbols-outlined">history</span>History</p>
             <p><span class="material-symbols-outlined">smart_display</span>Your Videos</p>   
             <p><span class="material-symbols-outlined">schedule</span>Watch Later</p>
             <p><span class="material-symbols-outlined">thumb_up</span>Like Video</p>
             <p><span class="material-symbols-outlined">expand_more</span>Show more</p>          
-         </div>
+         <!-- </div> -->
          
-         <div class="subscriptions">
+         <!-- <div class="subscriptions"> -->
             <p>SUBSCRIPTIONS</p>
             <div class="icon">
                 
@@ -100,35 +99,35 @@
          </div>
       </div>
 
+      <div class="all-items">
+        <p id="active">All</p>
+        <p>Mixer</p>
+        <p>Music</p>
+        <p>Bollywood Music</p>
+        <p>Live</p>
+        <p>Playlist</p>
+        <p>Moon</p>
+        <p>Web Development</p>
+        <p>Kapil Sharma</p>
+        <p>T-Series</p>
+        <p>Music live</p>
+        <p>Science</p>
+       
+      
+      
+      </div>
       
       <div  class="items">
-        <div class="all-items">
-          <p id="active">All</p>
-          <p>Item</p>
-          <p>Item</p>
-          <p>Item</p>
-          <p>Item</p>
-          <p>Item</p>
-          <p>Item</p>
-          <p>Item</p>
-          <p>Item</p>
-          <p>Item</p>
-          <p>Item</p>
-          <p>Item</p>
-          <p>Item</p>
-          <p>Item</p>
-          <p>Item</p>
-          <p>Item</p>
-          <p>Item</p>
-        </div>
         
-          <div id="container">
-          </div>
+      
+        <div id="videos-container">
 
-          <main>
-            <div id="videos-container">Loading...</div>
-          </main>
+        </div>
+      
+        
       </div>
+
+
   </div>
 
 

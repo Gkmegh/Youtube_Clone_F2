@@ -1,5 +1,6 @@
 const BASE_URL = "https://www.googleapis.com/youtube/v3";
 const API_KEY = "AIzaSyD_F9BhEA5T90ZtePyzQZuGAzexuskHRaQ";
+// const API_KEY = "AIzaSyC8rFXqr-xP-Q6l_faaYkNnrEHYz7gcUdA";
 
 const container = document.getElementById("videos-container");
 
@@ -51,20 +52,25 @@ function renderVideos(videos) {
         </div>
         <div class="video-description">
           <div class="channel-avatar">
-            <img src="" alt="channel avatar" />
+            <img src="https://yt3.googleusercontent.com/584JjRp5QMuKbyduM_2k5RlXFqHJtQ0qLIPZpwbUjMJmgzZngHcam5JMuZQxyzGMV5ljwJRl0Q=s176-c-k-c0x00ffffff-no-rj" alt="channel- aviator" />
           </div>
-          <div class="video-title">${video.snippet.localized.title}</div>
-          <div class="channel-description">
-            <p class="channel-name">Channel</p>
-            <p class="video-views">15K Views</p>
-            <p class="video-time">1 week ago</p>
+
+          <div class="video-title">
+          ${video.snippet.localized.title}
+            <div class="channel-description">
+              <b class="channel-name"> ${video.snippet.channelTitle}</b>
+              <div claas="channel-time">
+                <p class="video-views">15K Views ${" "} . ${" "}</p>
+                <p class="video-time">4 week ago</p>
+              </div>
+          </div>
           </div>
         </div>
       </div>
       `;
   }
 }
-
+  
 
 
 
